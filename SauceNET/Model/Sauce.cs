@@ -1,104 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
 
 namespace SauceNET.Model
 {
     public class Sauce
     {
-        [JsonProperty("header")]
-        public RequestDetails RequestDetails { get; }
-
-        [JsonProperty("results")]
-        public IList<Result> Results { get; }
+        public Request Request { get; set; }
+        public IList<Result> Results { get; set; }
+        public string Message { get; set; }
     }
 
-    public class RequestDetails
+    public class Request
     {
-        [JsonProperty("user_id")]
-        public int UserId { get; }
-
-        [JsonProperty("account_type")]
-        public int AccountType { get; }
-
-        [JsonProperty("short_limit")]
-        public string ShortLimit { get; }
-
-        [JsonProperty("long_limit")]
-        public string LongLimit { get; }
-
-        [JsonProperty("long_remaining")]
-        public int LongRemaining { get; }
-
-        [JsonProperty("short_remaining")]
-        public int ShortRemaining { get; }
-
-        [JsonProperty("status")]
-        public int Status { get; }
-
-        [JsonProperty("results_requested")]
-        public int ResultsRequested { get; }
-
-        [JsonProperty("index")]
-        public IEnumerable<Database> SearchedDatabases { get; }
-
-        [JsonProperty("search_depth")]
-        public string SearchDepth { get; }
-
-        [JsonProperty("minimum_similarity")]
-        public double MinimumSimilarity { get; }
-
-        [JsonProperty("query_image_display")]
-        public string QueryImageDisplay { get; }
-
-        [JsonProperty("query_image")]
-        public string QueryImage { get; }
-
-        [JsonProperty("results_returned")]
-        public int ResultsReturned { get; }
+        public int UserId { get; set; }
+        
+        public int AccountType { get; set; }
+        
+        public string ShortLimit { get; set; }
+        
+        public string LongLimit { get; set; }
+        
+        public int LongRemaining { get; set; }
+        
+        public int ShortRemaining { get; set; }
+        
+        public int Status { get; set; }
+        
+        public int ResultsRequested { get; set; }
+        
+        public string SearchDepth { get; set; }
+        
+        public double MinimumSimilarity { get; set; }
+        
+        public string QueryImageDisplay { get; set; }
+        
+        public string QueryImage { get; set; }
+        
+        public int ResultCount { get; set; }
     }
 
     public class Result
     {
-        [JsonProperty("header")]
-        public ResultHeader Data { get; }
-
+        public string Similarity { get; set; }
+        public string ThumbnailURL { get; set; }
+        public int DatabaseId { get; set; }
+        public string Name { get; set; }
+        public string DatabaseName { get; set; }
+        public IList<string> SourceURLs { get; set; }
+        public IList<Property> Properties { get; set; }
     }
 
-    public class Database
+    public class Property
     {
-        [JsonProperty("status")]
-        public int Status { get; }
-
-        [JsonProperty("parent_id")]
-        public int ParentId { get; }
-
-        [JsonProperty("id")]
-        public int Id { get; }
-
-        [JsonProperty("results")]
-        public int ResultCount { get; }
-    }
-
-    public class ResultHeader
-    {
-        [JsonProperty("similarity")]
-        public string Similarity { get; }
-
-        [JsonProperty("thumbnail")]
-        public string ThumbnailURL{ get; }
-
-        [JsonProperty("index_id")]
-        public int DatabaseId { get; }
-
-        [JsonProperty("index_name")]
-        public string ResultName { get; }
-    }
-
-    public class ResultData
-    {
-        [JsonProperty("ext_urls")]
-        public IList<string> ext_urls { get; }
+        public string Name { get; set; }
+        public string Valie { get; set; }
     }
 }
