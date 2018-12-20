@@ -697,6 +697,9 @@ namespace SauceNET.Model
 
         [JsonProperty("results_returned")]
         public int results_returned { get; set; }
+
+        [JsonProperty("message")]
+        public string message { get; set; }
     }
 
     public class Header

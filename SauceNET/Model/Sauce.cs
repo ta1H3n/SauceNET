@@ -8,6 +8,7 @@ namespace SauceNET.Model
     {
         public Request Request { get; set; }
         public IList<Result> Results { get; set; }
+        public string Message { get; set; }
     }
 
     public class Request

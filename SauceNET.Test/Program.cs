@@ -21,6 +21,7 @@ namespace SauceNao
         static async Task MainAsync(string[] args)
         {
             await ClientTest();
+            await SerializerTest();
         }
 
         static async Task SerializerTest()
@@ -36,11 +37,14 @@ namespace SauceNao
 
             Console.ReadLine();
         }
-
+        
         static async Task ClientTest()
         {
             var client = new SauceNETClient("");
-            var sauce = await client.GetSauceAsync("");
+
+            var sauce = await client.GetSauceAsync("https://i.imgur.com/WRCuQAG.jpg");
+
+            Console.ReadLine();
         }
     }
 }
