@@ -27,5 +27,5 @@ static async Task ClientTest()
 You can find your api key here: https://saucenao.com/user.php?page=search-api
 
 ### To-do
--Named databases
--Presentable result properties
+- Named databases
+- Presentable result properties
