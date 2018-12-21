@@ -19,7 +19,7 @@ static async Task ClientTest()
             var sauce = await client.GetSauceAsync(image);
 
             //Top result source url, if any.
-            string source = sauce.Results[0].SourceURLs[0];
+            string source = sauce.Results[0].SourceURL;
         }
 ```
 
