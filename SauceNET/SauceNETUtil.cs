@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace SauceNET
 {
@@ -15,15 +16,16 @@ namespace SauceNET
             await Task.Run(() =>
             {
                 var sauceRaw = JsonConvert.DeserializeObject<SauceRaw>(rawJson);
-                sauce = ConvertSauce(sauceRaw);
+                sauce = ParseSauce(sauceRaw);
             });
 
             return sauce;
         }
 
-        public static Sauce ConvertSauce(SauceRaw raw)
+        public static Sauce ParseSauce(SauceRaw raw)
         {
-            var results = ConvertResults(raw);
+            var results = ParseResults(raw);
+            results = results.OrderByDescending(x => x.Similarity).ToList();
 
             Sauce sauce = new Sauce
             {
@@ -52,7 +54,7 @@ namespace SauceNET
             return sauce;
         }
 
-        public static IList<Result> ConvertResults(SauceRaw raw)
+        public static IList<Result> ParseResults(SauceRaw raw)
         {
             var results = new List<Result>();
 
@@ -60,13 +62,16 @@ namespace SauceNET
             {
                 foreach (var x in raw.results)
                 {
+                    Int32.TryParse(x.header.index_name.Split('#', ':')[1], out int index);
                     var result = new Result
                     {
-                        DatabaseId = x.header.index_id,
+                        IndexId = x.header.index_id,
                         Name = x.header.index_name == null ? "" : x.header.index_name,
-                        SourceURLs = x.data.ext_urls == null ? null : x.data.ext_urls,
+                        SourceURL = x.data.ext_urls == null ? null : x.data.ext_urls[0],
                         Similarity = x.header.similarity == null ? "" : x.header.similarity,
-                        ThumbnailURL = x.header.thumbnail == null ? "" : x.header.thumbnail
+                        ThumbnailURL = x.header.thumbnail == null ? "" : x.header.thumbnail,
+                        DatabaseName = Databases.DatabaseNames[index],
+                        Properties = ParseProperties(x.data)
                     };
 
                     results.Add(result);
@@ -74,6 +79,23 @@ namespace SauceNET
             }
 
             return results;
+        }
+
+        public static IList<ResultProperty> ParseProperties(Data raw)
+        {
+            var properties = new List<ResultProperty>();
+
+            foreach (var prop in raw.GetType().GetProperties())
+            {
+                try
+                {
+                    if(prop.PropertyType == typeof(string) || prop.PropertyType == typeof(int?) || prop.PropertyType == typeof(int))
+                    properties.Add(new ResultProperty { Name = prop.Name, Value = prop.GetValue(raw).ToString() });
+                }
+                catch { };
+            }
+
+            return properties;
         }
     }
 }

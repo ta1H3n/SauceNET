@@ -36,6 +36,7 @@ namespace SauceNET
             var responseString = await response.Content.ReadAsStringAsync();
             
             var sauce = await SauceNETUtil.ParseSauceAsync(responseString);
+            
             return sauce;
         }
     }   

@@ -44,16 +44,16 @@ namespace SauceNET.Model
     {
         public string Similarity { get; set; }
         public string ThumbnailURL { get; set; }
-        public int DatabaseId { get; set; }
+        public int IndexId { get; set; }
         public string Name { get; set; }
         public string DatabaseName { get; set; }
-        public IList<string> SourceURLs { get; set; }
-        public IList<Property> Properties { get; set; }
+        public string SourceURL { get; set; }
+        public IList<ResultProperty> Properties { get; set; }
     }
 
-    public class Property
+    public class ResultProperty
     {
         public string Name { get; set; }
-        public string Valie { get; set; }
+        public string Value { get; set; }
     }
 }

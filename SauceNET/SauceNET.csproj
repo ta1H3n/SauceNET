@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>ta1H3n</Authors>
+    <Company />
+    <Description>Simple asynchronous wrapper for the SauceNAO API.</Description>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageTags>saucenao image search anime</PackageTags>
+    <PackageLicenseUrl>https://github.com/ta1H3n/SauceNET/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/ta1H3n/SauceNET</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

@@ -725,82 +725,82 @@ namespace SauceNET.Model
         public IList<string> ext_urls { get; set; }
 
         [JsonProperty("title")]
-        public string title { get; set; }
+        public string Title { get; set; }
 
         [JsonProperty("da_id")]
-        public int da_id { get; set; }
+        public int? dA_id { get; set; }
 
         [JsonProperty("author_name")]
-        public string author_name { get; set; }
+        public string AuthorName { get; set; }
 
         [JsonProperty("author_url")]
-        public string author_url { get; set; }
+        public string AuthorUrl { get; set; }
 
         [JsonProperty("pixiv_id")]
-        public int? pixiv_id { get; set; }
+        public int? PixivId { get; set; }
 
         [JsonProperty("member_name")]
-        public string member_name { get; set; }
+        public string MemberName { get; set; }
 
         [JsonProperty("member_id")]
-        public int? member_id { get; set; }
+        public int? MemberId { get; set; }
 
         [JsonProperty("bcy_id")]
-        public int? bcy_id { get; set; }
+        public int? bcyId { get; set; }
 
         [JsonProperty("member_link_id")]
-        public int? member_link_id { get; set; }
+        public int? MemberLinkId { get; set; }
 
         [JsonProperty("bcy_type")]
-        public string bcy_type { get; set; }
+        public string BcyType { get; set; }
 
         [JsonProperty("created_at")]
-        public DateTime? created_at { get; set; }
+        public DateTime? CreatedAt { get; set; }
 
         [JsonProperty("pawoo_id")]
-        public int? pawoo_id { get; set; }
+        public int? PawooId { get; set; }
 
         [JsonProperty("pawoo_user_acct")]
-        public string pawoo_user_acct { get; set; }
+        public string PawooUserAccount { get; set; }
 
         [JsonProperty("pawoo_user_username")]
-        public string pawoo_user_username { get; set; }
+        public string PawooUsername { get; set; }
 
         [JsonProperty("pawoo_user_display_name")]
-        public string pawoo_user_display_name { get; set; }
+        public string PawooDisplayName { get; set; }
 
         [JsonProperty("anidb_aid")]
-        public int? anidb_aid { get; set; }
+        public int? AnimeId { get; set; }
 
         [JsonProperty("source")]
-        public string source { get; set; }
+        public string Source { get; set; }
 
         [JsonProperty("part")]
-        public string part { get; set; }
+        public string Part { get; set; }
 
         [JsonProperty("year")]
-        public string year { get; set; }
+        public string Year { get; set; }
 
         [JsonProperty("est_time")]
-        public string est_time { get; set; }
+        public string EstTime { get; set; }
 
         [JsonProperty("seiga_id")]
-        public int? seiga_id { get; set; }
+        public int? SeigaId { get; set; }
 
         [JsonProperty("sankaku_id")]
-        public int? sankaku_id { get; set; }
+        public int? SankakuId { get; set; }
 
-        [JsonProperty("creator")]
-        public string creator { get; set; }
+       // [JsonProperty("creator")]
+       // public string Creator { get; set; }
 
         [JsonProperty("danbooru_id")]
-        public int? danbooru_id { get; set; }
+        public int? DanbooruId { get; set; }
 
         [JsonProperty("company")]
-        public string company { get; set; }
+        public string Company { get; set; }
 
         [JsonProperty("getchu_id")]
-        public string getchu_id { get; set; }
+        public string GetchuId { get; set; }
     }
 
     public class ResultRaw
