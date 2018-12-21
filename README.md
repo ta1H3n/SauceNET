@@ -19,7 +19,7 @@ static async Task ClientTest()
             var sauce = await client.GetSauceAsync(image);
 
             //Top result source url, if any.
-            string source = sauce.Results[0].SourceURLs[0];
+            string source = sauce.Results[0].SourceURL;
         }
 ```
 
@@ -27,5 +27,4 @@ static async Task ClientTest()
 You can find your api key here: https://saucenao.com/user.php?page=search-api
 
 ### To-do
-- Named databases
-- Presentable result properties
+- More presentable result properties
