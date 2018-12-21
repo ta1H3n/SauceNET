@@ -4,6 +4,9 @@ Asynchronous C# wrapper for [SauceNAO](https://saucenao.com/) API
 
 ## Usage
 ```cs
+using SauceNET;
+...
+
 static async Task ClientTest()
         {
             //Enter your SauceNao API key. Optional, leave empty otherwise.
