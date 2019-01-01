@@ -39,3 +39,4 @@ Install-Package SauceNET
 ## To-do
 - More presentable result properties
 - DB masks
+- Error handling
