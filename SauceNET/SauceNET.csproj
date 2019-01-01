@@ -9,7 +9,7 @@
     <PackageTags>saucenao image search anime</PackageTags>
     <PackageLicenseUrl>https://github.com/ta1H3n/SauceNET/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/ta1H3n/SauceNET</PackageProjectUrl>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
