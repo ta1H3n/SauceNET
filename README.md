@@ -1,9 +1,12 @@
 # SauceNET
-Simple Visual Studio wrapper for the SauceNao API
+Asynchronous C# wrapper for [SauceNAO](https://saucenao.com/) API
 
 
-### Tutorial
+## Usage
 ```cs
+using SauceNET;
+...
+
 static async Task ClientTest()
         {
             //Enter your SauceNao API key. Optional, leave empty otherwise.
@@ -23,8 +26,17 @@ static async Task ClientTest()
         }
 ```
 
-#### SauceNao
-You can find your api key here: https://saucenao.com/user.php?page=search-api
+### SauceNao
+You can find your api key [here.](https://saucenao.com/user.php?page=search-api)
 
-### To-do
+## Installation
+Install as a [NuGet package](https://www.nuget.org/packages/SauceNET)
+
+```powershell
+Install-Package SauceNET
+```
+
+## To-do
 - More presentable result properties
+- DB masks
+- Error handling
