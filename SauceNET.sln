@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SauceNET", "SauceNET\SauceN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SauceNET.Test", "SauceNET.Test\SauceNET.Test.csproj", "{EAA917DC-571A-4D0E-888B-47B3298EC65A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetTest", "NuGetTest\NuGetTest.csproj", "{5088780D-5AA5-4EB2-B672-D8B2CD432007}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EAA917DC-571A-4D0E-888B-47B3298EC65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAA917DC-571A-4D0E-888B-47B3298EC65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAA917DC-571A-4D0E-888B-47B3298EC65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5088780D-5AA5-4EB2-B672-D8B2CD432007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5088780D-5AA5-4EB2-B672-D8B2CD432007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5088780D-5AA5-4EB2-B672-D8B2CD432007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5088780D-5AA5-4EB2-B672-D8B2CD432007}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

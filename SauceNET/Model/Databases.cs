@@ -17,6 +17,8 @@ namespace SauceNET.Model
                 {5, "Pixiv" },
                 {51, "Pixiv" },
                 {52, "Pixiv" },
+                {6, "Pixiv" },
+                {7, "???" },
                 {8, "Nico Nico Seiga" },
                 {9, "Danbooru" },
                 {10, "drawr" },
