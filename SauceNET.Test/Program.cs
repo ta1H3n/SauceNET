@@ -21,21 +21,8 @@ namespace SauceNao
 
         static async Task MainAsync(string[] args)
         {
-            //await SerializerTest();
             await SomeTest();
             await ClientTest();
-        }
-
-        static async Task SerializerTest()
-        {
-            var result = await client.GetStringAsync("https://saucenao.com/search.php?db=999&output_type=2&testmode=1&numres=16&url=http%3A%2F%2Fsaucenao.com%2Fimages%2Fstatic%2Fbanner.gif");
-            Console.WriteLine(result);
-            Console.WriteLine();
-
-            JObject json = JObject.Parse(result);
-            Console.WriteLine(json.Count);
-
-            var Sauce = JsonConvert.DeserializeObject<SauceRaw>(result);
         }
 
         static async Task SomeTest()

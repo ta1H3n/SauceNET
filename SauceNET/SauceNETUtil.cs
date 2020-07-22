@@ -62,6 +62,16 @@ namespace SauceNET
                 foreach (var x in raw.results)
                 {
                     Int32.TryParse(x.header.index_name.Split('#', ':')[1], out int index);
+                    string dbName;
+
+                    try
+                    {
+                        dbName = Databases.DatabaseNames[index];
+                    } catch (KeyNotFoundException)
+                    {
+                        dbName = "Unknown";
+                    }
+
                     var result = new Result
                     {
                         IndexId = x.header.index_id,
@@ -69,7 +79,10 @@ namespace SauceNET
                         SourceURL = x.data.ext_urls == null ? null : x.data.ext_urls[0],
                         Similarity = x.header.similarity == null ? "" : x.header.similarity,
                         ThumbnailURL = x.header.thumbnail == null ? "" : x.header.thumbnail,
-                        DatabaseName = Databases.DatabaseNames[index],
+                        DatabaseName = dbName,
+                        InnerSource = x.data.Source,
+                        ExtUrls = x.data.ext_urls,
+
                         Properties = ParseProperties(x.data)
                     };
 

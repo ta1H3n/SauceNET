@@ -47,7 +47,8 @@ namespace SauceNET.Model
                 {34, "deviantArt" },
                 {35, "Pawoo" },
                 {36, "Madokami" },
-                {37, "MangaDex" }
+                {37, "MangaDex" },
+                {38, "E-hentai" }
             };
         }
     }

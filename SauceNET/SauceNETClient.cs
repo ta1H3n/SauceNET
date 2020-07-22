@@ -15,14 +15,15 @@ namespace SauceNET
             ApiKey = apiKey;
         }
 
-        public async Task<Sauce> GetSauceAsync(string imageUrl)
+        public async Task<Sauce> GetSauceAsync(string imageUrl, string dbIndex = "999", string numRes = "6")
         {
             var values = new Dictionary<string, string>
             {
-                {"db", "999" },
+                {"db", dbIndex },
                 {"output_type", "2" },
                 {"api_key", ApiKey },
-                {"url", imageUrl }
+                {"url", imageUrl },
+                {"numres", numRes }
             };
             var content = new FormUrlEncodedContent(values);
 

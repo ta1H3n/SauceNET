@@ -46,6 +46,8 @@ namespace SauceNET.Model
         public string Name { get; set; }
         public string DatabaseName { get; set; }
         public string SourceURL { get; set; }
+        public string InnerSource { get; set; }
+        public IList<string> ExtUrls { get; set; }
         public IList<ResultProperty> Properties { get; set; }
     }
 
