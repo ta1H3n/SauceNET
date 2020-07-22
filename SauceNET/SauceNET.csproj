@@ -6,14 +6,24 @@
     <Company />
     <Description>Simple asynchronous wrapper for the SauceNAO API.</Description>
     <PackageIconUrl></PackageIconUrl>
-    <PackageTags>saucenao image search anime</PackageTags>
-    <PackageLicenseUrl>https://github.com/ta1H3n/SauceNET/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>saucenao image search anime engine source</PackageTags>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/ta1H3n/SauceNET</PackageProjectUrl>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
+    <PackageReleaseNotes>Read latest commit message for updates.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
