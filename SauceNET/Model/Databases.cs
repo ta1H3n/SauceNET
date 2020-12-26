@@ -48,7 +48,11 @@ namespace SauceNET.Model
                 {35, "Pawoo" },
                 {36, "Madokami" },
                 {37, "MangaDex" },
-                {38, "E-hentai" }
+                {38, "E-hentai" },
+                {39, "ArtStation" },
+                {40, "FurAffinity" },
+                {41, "Twitter" },
+                {42, "Furry Network" }
             };
         }
     }
