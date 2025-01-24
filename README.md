@@ -8,22 +8,22 @@ using SauceNET;
 ...
 
 static async Task ClientTest()
-        {
-            //Enter your SauceNao API key. Optional, leave empty otherwise.
-            string apiKey = "";
+{
+    //Enter your SauceNao API key. Optional, leave empty otherwise.
+    string apiKey = "";
 
-            //Create your SauceNET client
-            var client = new SauceNETClient(apiKey);
+    //Create your SauceNET client
+    var client = new SauceNETClient(apiKey);
 
-            //Enter your image url.
-            string image = "https://i.imgur.com/WRCuQAG.jpg";
+    //Enter your image url.
+    string image = "https://i.imgur.com/WRCuQAG.jpg";
 
-            //Get the sauce
-            var sauce = await client.GetSauceAsync(image);
+    //Get the sauce
+    var sauce = await client.GetSauceAsync(image);
 
-            //Top result source url, if any.
-            string source = sauce.Results[0].SourceURL;
-        }
+    //Top result source url, if any.
+    string source = sauce.Results[0].SourceURL;
+}
 ```
 
 ### SauceNao
